@@ -34,11 +34,13 @@ To configure Account Factory accounts in a more automated way, you can create La
             "Sid": "AWSControlTowerAccountFactoryAccess",
             "Effect": "Allow",
             "Action": [
+                "s3:GetObject",
                 "sso:GetProfile",
                 "sso:CreateProfile",
                 "sso:UpdateProfile",
                 "sso:AssociateProfile",
                 "sso:CreateApplicationInstance",
+                "sso:DescribeRegisteredRegions",
                 "sso:GetSSOStatus",
                 "sso:GetTrust",
                 "sso:CreateTrust",
@@ -61,12 +63,10 @@ To configure Account Factory accounts in a more automated way, you can create La
                 "sso-directory:DescribeGroups",
                 "sso-directory:DescribeDirectory",
                 "sso-directory:GetUserPoolInfo",
+                "organizations:describeOrganization",
                 "controltower:CreateManagedAccount",
                 "controltower:DescribeManagedAccount",
-                "controltower:DeregisterManagedAccount",
-                "s3:GetObject",
-                "organizations:describeOrganization",
-                "sso:DescribeRegisteredRegions"
+                "controltower:DeregisterManagedAccount"
             ],
             "Resource": "*"
         }
